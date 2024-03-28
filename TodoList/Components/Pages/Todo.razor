@@ -1,6 +1,8 @@
 ﻿@page "/todo"
 @rendermode InteractiveServer
 <h3>Todos: (@todos.Count(todo => !todo.IsDone))</h3> @*check for todo that are not checked*@
+<h5>Done: (@todos.Count(todo => todo.IsDone))</h5> @*check for todo that are checked*@
+
 
 <style>
     .no-bullets {
@@ -27,11 +29,11 @@
 
     private List<TodoListItem.TodoItem> todos = new();
 
-private void AddTodo() { //declare a private method 'addTodo'
-    //add the todo
-    if (!string.IsNullOrWhiteSpace(newTodo)) { <!-- checks if the newTodo string is not (!) null, empty, or contains only whitespace characters  -->
-        todos.Add(new TodoListItem.TodoItem {Title = newTodo}); //adds a 'new' TodoItem setting the Title to 'newTodo'
-        newTodo = string.Empty; //deletes previous input allowing for a new input
+    private void AddTodo() { //declare a private method 'addTodo'
+        //add the todo
+        if (!string.IsNullOrWhiteSpace(newTodo)) { <!-- checks if the newTodo string is not (!) null, empty, or contains only whitespace characters  -->
+            todos.Add(new TodoListItem.TodoItem {Title = newTodo}); //adds a 'new' TodoItem setting the Title to 'newTodo'
+            newTodo = string.Empty; //deletes previous input allowing for a new input
+        }
     }
-}
 }

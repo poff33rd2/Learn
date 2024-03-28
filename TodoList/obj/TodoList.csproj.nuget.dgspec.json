@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/prenticelathon/Desktop/WERK WERK WERK/CODEX/TodoList/TodoList.csproj": {}
+    "/Users/prenticelathon/Documents/GitHub/Learn/TodoList/TodoList.csproj": {}
   },
   "projects": {
-    "/Users/prenticelathon/Desktop/WERK WERK WERK/CODEX/TodoList/TodoList.csproj": {
+    "/Users/prenticelathon/Documents/GitHub/Learn/TodoList/TodoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/prenticelathon/Desktop/WERK WERK WERK/CODEX/TodoList/TodoList.csproj",
+        "projectUniqueName": "/Users/prenticelathon/Documents/GitHub/Learn/TodoList/TodoList.csproj",
         "projectName": "TodoList",
-        "projectPath": "/Users/prenticelathon/Desktop/WERK WERK WERK/CODEX/TodoList/TodoList.csproj",
+        "projectPath": "/Users/prenticelathon/Documents/GitHub/Learn/TodoList/TodoList.csproj",
         "packagesPath": "/Users/prenticelathon/.nuget/packages/",
-        "outputPath": "/Users/prenticelathon/Desktop/WERK WERK WERK/CODEX/TodoList/obj/",
+        "outputPath": "/Users/prenticelathon/Documents/GitHub/Learn/TodoList/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/prenticelathon/.nuget/NuGet/NuGet.Config"

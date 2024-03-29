@@ -1,30 +1,34 @@
+def get_total_cost():
+    total_cost = 0 #set the variables before going into function
+    isdonescanning = 'y'
 
-runningshorts = input('$')
-item1cost = int(runningshorts)
+    #while loop uses variables to signal whether or not a function continues
+    while isdonescanning != 'n':
+        itementry = input('enter the cost of the item: $')
+        cost = float(itementry)
+        total_cost += cost
+        isdonescanning = input('Is there more items? (y/n): ')
 
-tracksocks = input('$')
-item2cost = int(tracksocks)
+#returns the variable as the data retreived at the end of using the function
+    return total_cost
 
-beaniecap = input('$')
-item3cost = int(beaniecap)
 
+total_cost = get_total_cost() #intialize the function to run before doing everything else
 loyalty = input('Are you are loyal member? (y/n)')
 isloyalmember = (loyalty == 'y')
 
-bill = item1cost + item2cost + item3cost
-
-isdiscount = isloyalmember and bill > 50
+isdiscount = isloyalmember and total_cost > 50
 
 if isdiscount:
-    discountbill = bill * .75
+    discountbill = total_cost * .75
     total_bill = discountbill
 else:
-    total_bill = bill
+    total_bill = total_cost
 
 print(f'Total bill: ${total_bill}')
 
 
-
+#update this to accept new inputs until the user is done adding to eliminate hard coding which products are being purchased
 
 
 

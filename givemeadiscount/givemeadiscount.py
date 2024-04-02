@@ -19,7 +19,7 @@ isloyalmember = (loyalty == 'y')
 
 isdiscount = isloyalmember and total_cost > 50
 
-if isdiscount:
+if isdiscount: #defaults to checking if isdiscount is True
     discountbill = total_cost * .75
     total_bill = discountbill
 else:

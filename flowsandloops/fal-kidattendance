@@ -1,0 +1,13 @@
+kidsnothere = ['will', 'sam', 'james', 'ron']
+kidshere = ['jeremy', 'Dill', 'renny']
+attedance = kidshere + kidsnothere
+#BONUS: create a counter that couns attendance
+
+for kid in attedance:
+
+    if kid in kidsnothere:
+        print(f'{kid}, not here') 
+# elif: kids not here != 0 print 'class is not full'
+    else:
+        print(f'{kid}, is here')
+    

@@ -28,7 +28,7 @@ with open('<filename>', 'r' ) as file:
     print(file.read())
     print(file.read(40)) #use a int to specify how many characters will be returned/read form the file
 
-__readline()__ - returns the single line as a string
+__readline()__ - returns the first line as a string
 __readline(n)__ - returns are int of chars
 file content:
 This is the first line.
@@ -42,7 +42,7 @@ output: this is the first line.
 output 2: this is the
 
 __readlines()__ - reads the content of a file and returns it in an ordered list, allows lines to be selected.
-__readlines(n)__ - picks out the specified number of lines.
+__readlines(n)__ - picks out the specified number of lines. you can not select the line number only can iterate
 
 file content:
 This is the first line.
@@ -75,3 +75,15 @@ __relative paths__ - used to create a file where it
 - contains no root directory call - posting file to the current path the operation is being ran at or default location
  
 
+
+
+
+
+with open('filename.txt', 'r') as source:
+even_lines = []
+
+for line in enumerate source:
+    if line % 2 == 0:
+    even_lines.append()
+
+    print even_lines

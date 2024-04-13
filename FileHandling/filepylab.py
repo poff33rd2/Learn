@@ -14,6 +14,11 @@ def read_file(file_name):
         string: contents of the given file.
     """
     ### WRITE SOLUTION HERE
+    with open(file_name, 'r') as source:
+        f = source.read()
+        print (f)
+        return f
+
     
     raise NotImplementedError()
 
@@ -32,7 +37,11 @@ def read_file_into_list(file_name):
         list: a list where each element is a line in the file.
     """
     ### WRITE SOLUTION HERE
+    with open(file_name, 'r') as source:
+        f_content = [line.strip() for line in source.readlines()]
 
+
+        return f_content
     raise NotImplementedError()
 
 def write_first_line_to_file(file_contents, output_filename):
@@ -52,7 +61,19 @@ def write_first_line_to_file(file_contents, output_filename):
     """
     ### WRITE SOLUTION HERE
 
-    raise NotImplementedError()
+    
+
+    with open(output_filename, 'w' ) as output:
+        first_line_index = file_contents.find('\n')
+
+        if first_line_index == -1:
+            first_line = file_contents
+        else: 
+            first_line = file_contents[:first_line_index]
+
+        output.write(first_line)
+
+    # raise NotImplementedError()
 
 
 def read_even_numbered_lines(file_name):
@@ -70,6 +91,15 @@ def read_even_numbered_lines(file_name):
         list: a list of the even-numbered lines of the file
     """
     ### WRITE SOLUTION HERE
+    even_lines = [] #creates an empty array named even lines to allows the pull in of string numbers to place into source.readlines{1, 2, 3, 4}
+
+    with open(file_name, 'r') as source:
+        for line, lines in enumerate(source, start=1):
+            if line % 2 == 0:
+                even_lines.append(lines.strip())
+
+
+        return even_lines
 
     raise NotImplementedError()
 
@@ -90,18 +120,25 @@ def read_file_in_reverse(file_name):
     """
     ### WRITE SOLUTION HERE
 
-    raise NotImplementedError()
+    with open(file_name, 'r') as source:
+        lines = source.readlines()
+        reversed_lines = lines[::-1]
+
+        return [line.strip() for line in reversed_lines]
+
+
+    # raise NotImplementedError()
 
 '''
 Here are some sample commands to help you run/test your implementations.
 Feel free to uncomment/modify/add to them as you wish.
 '''
 def main():
-    file_contents = read_file("sampletext.txt")
-    # print(read_file_into_list("sampletext.txt"))
-    # write_first_line_to_file(file_contents, "online.txt")
-    # print(read_even_numbered_lines("sampletext.txt"))
-    # print(read_file_in_reverse("sampletext.txt"))
+    file_contents = read_file('FileHandling/sampletext.txt')
+    print(read_file_into_list('FileHandling/sampletext.txt'))
+    write_first_line_to_file(file_contents, "FileHandling/online.txt")
+    print(read_even_numbered_lines('FileHandling/sampletext.txt'))
+    print(read_file_in_reverse("FileHandling/sampletext.txt"))
 
 if __name__ == "__main__":
     main()

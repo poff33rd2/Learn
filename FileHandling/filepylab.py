@@ -60,9 +60,6 @@ def write_first_line_to_file(file_contents, output_filename):
         output_filename: the name of the file to be written to
     """
     ### WRITE SOLUTION HERE
-
-    
-
     with open(output_filename, 'w' ) as output:
         first_line_index = file_contents.find('\n')
 
@@ -127,7 +124,7 @@ def read_file_in_reverse(file_name):
         return [line.strip() for line in reversed_lines]
 
 
-    # raise NotImplementedError()
+    raise NotImplementedError()
 
 '''
 Here are some sample commands to help you run/test your implementations.
